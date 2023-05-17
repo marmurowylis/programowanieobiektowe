@@ -1,0 +1,62 @@
+
+package zadanie;
+
+class Animal {
+
+    final String name;
+public Animal(String name) {
+    this.name = name;
+}
+    public void sound() {
+    }
+}
+
+//do kazdej klasy implementacja metody sound, ktora wypisuje dzwiek
+
+class Dog extends Animal {
+    //pies robi hau hau
+    public Dog(String name) {
+        super(name);
+    }
+    @Override
+    public void sound() {
+        System.out.println(name + "Hau hau");
+    }
+}
+
+class Cat extends Animal {
+    //kot robi miau miau
+    public Cat(String name) {
+        super(name);
+    }
+    @Override
+    public void sound() {
+        System.out.println(name + "Miau miau");
+    }
+}
+
+class Duck extends Animal {
+    //kaczka robi kwa kwa
+    public Duck(String name) {
+        super(name);
+    }
+    @Override
+        public void sound() {
+            System.out.println(name + "Kwa kwa");
+        }
+    }
+
+public class Main {
+    public static void main(String[] args) {
+        System.out.println("Jak robią zwierzątka?");
+        System.out.println("- - - - - - - - - - -");
+        
+        Dog dog = new Dog("Burek: ");
+        Cat cat = new Cat("Puszek: ");
+        Duck duck = new Duck("Donald: ");
+       
+        dog.sound();
+        cat.sound();
+        duck.sound();
+    }
+}
